@@ -1,0 +1,32 @@
+import json
+
+class Employee:
+    def __init__(self):
+        self.emp = {}
+
+    def employee_details(self):
+        self.name = input("Name of the employee: ")
+        self.dob = input("Enter the DOB of the employee: ")
+        self.height = float(input("Height of the employee: "))
+        self.city = input("City of the employee: ")
+        self.state = input("State of the employee: ")
+
+        self.emp_info = len(self.emp) + 1
+        self.details = {
+            "name": self.name,
+            "DOB": self.dob,
+            "Height": self.height,
+            "City": self.city,
+            "State": self.state
+        }
+
+        self.emp[self.emp_info] = self.details
+
+    def write_to_json(self):
+        with open("employee.json", "w") as f:
+            json.dump(self.emp, f)
+
+x = Employee()
+for _ in range(5):
+    x.employee_details()
+x.write_to_json()
