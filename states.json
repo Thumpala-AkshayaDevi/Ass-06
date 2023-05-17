@@ -1,0 +1,10 @@
+import json
+indian_states= {"Maharashtra": "Mumbai",
+    "Tamil Nadu": "Chennai",
+    "Karnataka": "Bengaluru",
+    "Delhi": "New Delhi",
+    "Andhra Pradesh":"Amaravati" ,
+    "Himachal Pradesh":"Shimla" , 
+    "Kerala":"Thiruvananthapuram"}
+json_string=json.dumps(x)
+print(json_string)
